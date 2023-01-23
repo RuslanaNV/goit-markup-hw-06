@@ -705,6 +705,11 @@ fill: var(--light-mode-color);
     margin-bottom: 8px;
 }
 
+.modal-field-chek {
+    margin-bottom: 24px;
+}
+
+
 .input-wrap {
     position: relative;
 }
@@ -746,7 +751,7 @@ fill: var(--light-mode-color);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 24px;
+    
     background-color: var(--primaru-brand-color);
     
     border-radius: 4px;
