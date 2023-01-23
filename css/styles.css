@@ -223,7 +223,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.04em;
 
-    cursor:pointer
+    cursor:pointer;
 }
 
 .hero .btn {
@@ -522,6 +522,77 @@ fill: var(--light-mode-color);
     margin-bottom: 16px;
 }
 
+.footer-form-titl {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondery-text-color);
+
+}
+
+
+/*---------FOOTER FORM---------*/
+
+.footer-form-titl {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondery-text-color);
+    margin-bottom: 16px;
+
+}
+
+.footer-input {
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    padding: 8px 16px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: var(--secondery-text-color);
+    margin-right: 24px;
+}
+
+.footer-field-form {
+   display: flex;
+   gap: 24px; 
+}
+
+.button-footer-form {
+    width: 165px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primaru-brand-color);
+    border-radius: 4px;
+    color: var(--secondery-text-color);
+    font-weight: 500;
+    line-height: 1.5px;
+    letter-spacing: 0.04em;
+    cursor:pointer;
+    border: transparent;
+}
+
+.footer-form-icon {
+    margin-left: 16px;  
+    fill: var(--secondery-text-color);
+}
+
+.button-footer-form:hover,
+.button-footer-form:focus {
+    background-color: var(--pressed-state-color);
+    color: var(--secondery-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+} 
+
+
+
 /*--------------MODAL-----------------------*/
 
 .backdrop {
@@ -546,7 +617,7 @@ fill: var(--light-mode-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%) scaleY(1);
     transition: transform var(--duration) ;
-    padding: 72px 24px;
+    padding: 72px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -555,6 +626,7 @@ fill: var(--light-mode-color);
     
 .modal-icon {
     fill: #000000;
+    transition: fill var(--duration);
 }
 
 
@@ -566,7 +638,18 @@ fill: var(--light-mode-color);
     height: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #E7E9FC;
+    background-color: var(--accent-color);
+    transition: background-color var(--duration);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: var(--pressed-state-color);
+}
+
+.modal-close:hover > .modal-icon,
+.modal-close:focus > .modal-icon {
+    fill: var(--secondery-text-color);
 }
 
 
@@ -579,10 +662,11 @@ fill: var(--light-mode-color);
 .modal-title {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--headings-text-color);
+    margin-bottom: 16px;
     
 }
 
@@ -591,7 +675,18 @@ fill: var(--light-mode-color);
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    padding-left: 16px;
+    padding-left: 38px;
+    background-color: transparent;
+    outline: none;
+    transition: border-color var(--duration);
+}
+
+.modal-input:focus {
+    border-color: var(--primaru-brand-color);
+}
+
+.modal-input:focus + .input-icon {
+    fill: var(--primaru-brand-color); 
 }
 
 .input-text {
@@ -599,7 +694,7 @@ fill: var(--light-mode-color);
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1,16;
+    line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--helper-text-color);
 
@@ -609,6 +704,110 @@ fill: var(--light-mode-color);
     margin-bottom: 8px;
 }
 
+.input-wrap {
+    position: relative;
+}
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill var(--duration);
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 16px; 
+    resize: none;
+    outline: none;
+    transition: var(--duration);
+}
+
+.modal-comment:focus {
+    border-color: var(--primaru-brand-color)
+}
+
+.modal-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.button-form {
+    width: 169px;
+    height: 56px;
+    padding: 16px 32px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    background-color: var(--primaru-brand-color);
+    
+    border-radius: 4px;
+    border: transparent;
+    
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--secondery-text-color);
+    cursor:pointer;
+    transition: background-color var(--duration), box-shadow var(--duration);
+}
+.button-form:hover,
+.button-form:focus{
+    background-color: var(--pressed-state-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+
+.check-text span {
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-right: 8px; 
+    fill: transparent;
+    transition: background-color var(--duration);
+}
+
+.check-text {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #757575;
+}
+
+.modal-link {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    color: var(--primaru-brand-color);
+}
+
+.check-icon {
+    transition: fill var(--duration);
+}
+
+.input-check:checked + .check-text span {
+    background-color: var(--pressed-state-color);
+    border: 1.25px solid var(--pressed-state-color);
+    fill: var(--light-mode-color);
+}
 
 
 
