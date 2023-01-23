@@ -577,6 +577,7 @@ fill: var(--light-mode-color);
     letter-spacing: 0.04em;
     cursor:pointer;
     border: transparent;
+    transition: background-color var(--duration);
 }
 
 .footer-form-icon {
